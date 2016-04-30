@@ -1,0 +1,37 @@
+<div class="container">
+<h3>Pokemon List</h3>
+
+<nav>
+  <ul class="pagination">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li ng-repeat='n in num' ng-click="page(n)"><a>{{n}}</a></li>
+
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<!-- <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+        </tr>
+      </thead> -->
+      <!-- <tbody> -->
+      <ul>
+        <li ng-repeat='pokemon in pokeList' ui-sref='detail({id: pokemon.entry_number})'>
+          <div>{{pokemon.entry_number}}</div>
+          <div>{{pokemon.pokemon_species.name}}</div>
+        </li>
+      </ul>
+      <!-- </tbody> -->
+    <!-- </table> -->
+</div>

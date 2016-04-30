@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>API Viewer</title>
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/bower_components/angular/angular.min.js"></script>
+  <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+  <script src="/js/module.js"></script>
+  <script src="/js/controllers.js"></script>
+  <script src="/js/services.js"></script>
+</head>
+<body ng-app='pokeApp'>
+  <div class="container">
+    <div class="panel panel-success">
+      <div class="panel-heading"></div>
+      <div class="panel-body">
+        <ul class="nav nav-pills nav-justified">
+          <li><a ui-sref='home'>Home</a></li>
+          <li><a ui-sref='list'>List</a></li>
+        </ul>
+      </div>
+    </div>
+    <div>
+
+    </div>
+
+    <ui-view> </ui-view>
+  </div><!-- /.container -->
+</body>
+</html>

@@ -1,0 +1,9 @@
+.panel-heading {
+  height: 120px;
+  background: red;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e0/Pokemon_(letters).png');
+  background-size: 100% 100%;
+}
+.panel-body {
+  height: 60px;
+}
