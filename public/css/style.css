@@ -1,9 +1,87 @@
-.panel-heading {
-  height: 120px;
-  background: red;
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e0/Pokemon_(letters).png');
+/*.panel-heading {
+  height: 200px;
+  background-image: url('http://img15.deviantart.net/8b81/i/2009/271/9/0/pokeball_by_tigerhawk01.jpg');
   background-size: 100% 100%;
 }
 .panel-body {
   height: 60px;
+}*/
+.navbar {
+  min-height: 120px;
+}
+
+.navbar-nav {
+  color: white;
+  margin: 20px;
+}
+
+.glyphicon {
+  font-size: 32px;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.pokeball {
+  margin-top: 10px;
+  max-width: 100px;
+  max-height: 100px;
+}
+.list-thumbnail {
+  text-align: center;
+  background-color: #b2ffb2;
+  color: #696969;
+  display: inline-block;
+  min-width: 250px;
+  min-height: 100px;
+  border-radius: 10%;
+}
+
+.sprite {
+  margin-top: 100px;
+  min-width: 150px;
+  min-height: 150px;
+}
+.sprite img {
+  transform: scale(3.0);
+}
+.label {
+  margin: 2px;
+  min-width: 20px;
+}
+.label-normal {
+  background: #004600;
+}
+.label-fairy {
+  background: #b2497d;
+}
+.label-poison {
+  background: purple;
+}
+.label-ground {
+  background: brown;
+}
+.label-ability {
+  background: #000059;
+}
+.card {
+  margin-top: 75px;
+  margin-left: 75px;
+  text-align: justify;
+}
+.detail{
+  text-align: center;
+}
+.detail-thumbnail {
+  min-width: 500px;
+  min-height: 500px;
+  color: #696969;
+}
+.loading {
+  text-align: center;
+}
+.jumbotron {
+  margin-top: 50px;
+  height: 500px;
+  background-image: url("http://wallpapershacker.com/wallpaper_mirror/pokemon_charizard_hd-wallpaper-988529.jpg");
+  background-size: 100% 100%;
 }

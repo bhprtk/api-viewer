@@ -1,8 +1,18 @@
-<h1>detail</h1>
-
-  <div>name: {{pokeName}}</div>
-  <img src={{pokeSprite}}>
-  <div>type: <span ng-repeat='type in pokeType'> {{type}} </span></div>
-  <div>abilities: <span ng-repeat='ability in abilities'> {{ability}} </span></div>
-  <div>height: {{pokeHeight}} in</div>
-  <div>weight: {{pokeWeight}} lbs</div>
+<div class="col-md-3">
+</div>
+<div class="col-md-6" align="center">
+<div class="thumbnail detail-thumbnail">
+  <div ng-show="loading" class="loading"><i class="fa fa-spinner fa-spin"></i> Loading pokemon</div>
+  <div><h1>{{pokeName | titlecase}}</h1></div>
+  <div ng-show="imageLoading" class="loading"><i class="fa fa-spinner fa-spin"></i> Loading sprites</div>
+  <div class="sprite"><img ng-src="{{pokeSprite}}"></div>
+  <div class="card">
+    <h4>Type: <span ng-class="appliedClass(type)" ng-repeat='type in pokeType'> {{type}} </span> </h4>
+    <h4>Abilities: <span ng-repeat='ability in abilities' class="label label-ability"> {{ability}} </span></h4>
+    <h4>Height: {{pokeHeight}} in</h4>
+    <h4>Weight: {{pokeWeight}} lbs</h4>
+  </div>
+</div>
+</div>
+<div class="col-md-3">
+</div>

@@ -3,35 +3,29 @@
 
 <nav>
   <ul class="pagination">
-    <li>
-      <a href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
     <li ng-repeat='n in num' ng-click="page(n)"><a>{{n}}</a></li>
-
-    <li>
-      <a href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
   </ul>
 </nav>
 
-<!-- <table class="table">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Name</th>
-        </tr>
-      </thead> -->
-      <!-- <tbody> -->
-      <ul>
+<div ng-show="listLoading" class="loading"><h1><i class="fa fa-spinner fa-spin"></i> Loading pokemon</h1></div>
+<div class="row">
+  <div class="col-xs-6 col-md-3" ng-repeat='pokemon in pokeList' ui-sref='detail({id: pokemon.entry_number})'>
+    <div class="thumbnail animated list-thumbnail"
+    ng-class="{bounce: hover}"
+    ng-mouseenter="hover = true"
+    ng-mouseleave="hover = false">
+        <div class="number"><h3># {{pokemon.entry_number}}</h1></div>
+        <div class="name"><h3>{{pokemon.pokemon_species.name | titlecase}}</h3></div>
+    </div>
+  </div>
+
+</div>
+
+      <!-- <ul>
         <li ng-repeat='pokemon in pokeList' ui-sref='detail({id: pokemon.entry_number})'>
           <div>{{pokemon.entry_number}}</div>
           <div>{{pokemon.pokemon_species.name}}</div>
         </li>
-      </ul>
-      <!-- </tbody> -->
-    <!-- </table> -->
-</div>
+      </ul> -->
+
+</div> <!-- /.container -->

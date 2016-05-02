@@ -2,6 +2,17 @@
 
 var app = angular.module('pokeApp', ['ui.router']);
 
+app.filter('titlecase', function() {
+  return function(input, joiner) {
+    if(!input) return;
+
+    return input.toLowerCase().split(' ').map(word => {
+      return word[0].toUpperCase() + word.slice(1);
+    }).join(joiner || ' ');
+  };
+});
+
+
 app.config(function($stateProvider, $urlRouterProvider) {
 
   $stateProvider
@@ -21,5 +32,5 @@ app.config(function($stateProvider, $urlRouterProvider) {
       controller: 'detailCtrl'
     });
 
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/home');
 });

@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>API Viewer</title>
-  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://bootswatch.com/united/bootstrap.min.css">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/animate.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
   <script src="/bower_components/jquery/dist/jquery.min.js"></script>
   <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="/bower_components/angular/angular.min.js"></script>
@@ -15,20 +17,24 @@
   <script src="/js/services.js"></script>
 </head>
 <body ng-app='pokeApp'>
-  <div class="container">
-    <div class="panel panel-success">
-      <div class="panel-heading"></div>
-      <div class="panel-body">
-        <ul class="nav nav-pills nav-justified">
-          <li><a ui-sref='home'>Home</a></li>
-          <li><a ui-sref='list'>List</a></li>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a ui-sref="home"><img class="pokeball" src="https://upload.wikimedia.org/wikipedia/en/3/39/Pokeball.PNG"></a>
+        </div>
+        <ul class="nav navbar-nav navbar-left">
+          <li><h1>Pokémon API</h1></li>
         </ul>
-      </div>
-    </div>
-    <div>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a ui-sref="home" class="glyphicon glyphicon-home"></a></li>
+            <li><a ui-sref="list" class="glyphicon glyphicon-list"></a></li>
+        </ul>
+      </div><!-- /.container-fluid -->
+    </nav>
 
-    </div>
 
+    <div class="container">
     <ui-view> </ui-view>
   </div><!-- /.container -->
 </body>
